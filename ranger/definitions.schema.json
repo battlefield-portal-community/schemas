@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/battlefield-portal-community/ranger/main/bot/configs/schemas/message.schema.json",
+  "$id": "https://raw.githubusercontent.com/battlefield-portal-community/schemas/main/ranger/definitions.schema.json",
   "title": "Basic Blocks",
   "description": "Schema for reusable blocks definitions",
   "type": "object",
