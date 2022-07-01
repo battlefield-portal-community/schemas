@@ -24,21 +24,22 @@
             "collapsed": true
           },
           "properties": {
+            "title": {
+              "type": "string",
+              "title": "Title",
+              "description": "Title of the embed"
+            },
+            "description": {
+              "type": "string",
+              "title": "Description",
+              "format": "textarea",
+              "description": "Content of the embed"
+            },
             "color": {
               "type": "string",
               "format": "color",
               "title": "Color of left border of embed",
               "default": "#26FFDF"
-            },
-            "description": {
-              "type": "string",
-              "title": "Description",
-              "description": "Content of the embed"
-            },
-            "title": {
-              "type": "string",
-              "title": "Title",
-              "description": "Title of the embed"
             }
           }
         },
