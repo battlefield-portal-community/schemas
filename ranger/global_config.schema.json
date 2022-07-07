@@ -5,6 +5,18 @@
   "description": "Control Which modules are turned on from here",
   "type": "object",
   "properties": {
+    "updateGlobalConfig": {
+      "propertyOrder": 1,
+      "format": "button",
+      "title": "Update Global Config",
+      "options": {
+        "button": {
+          "icon": "icon-arrow-down",
+          "action": "updateGlobalConfig",
+          "validated": true
+        }
+      }
+    },
     "cogs": {
       "title": "All cogs",
       "type": "object",
