@@ -106,20 +106,28 @@
       "type": "array",
       "items": {
         "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "color": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
+          "properties": {
+            "title": {
+              "type": "string",
+              "title": "Title",
+              "description": "Title of the embed"
+            },
+            "description": {
+              "type": "string",
+              "title": "Description",
+              "format": "textarea",
+              "description": "Content of the embed"
+            },
+            "color": {
+              "type": "string",
+              "format": "color",
+              "title": "Color of left border of embed",
+              "default": "#26FFDF"
+            },
+            "name": {
+              "type": "string"
+            }
           }
-        }
       },
       "additionalProperties": false,
       "minItems": 1,
