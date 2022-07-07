@@ -99,6 +99,41 @@
           }
         }
       }
+    },
+    "embedMessage": {
+      "title": "Message",
+      "description": "Message That will be sent",
+      "type": "object",
+      "properties": {
+        "embeds": {
+          "title": "Embeds",
+          "description": "Embeds to send in this message",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "color": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false,
+          "minItems": 1,
+          "maxItems": 25,
+          "options": {
+            "collapsed": true
+          }
+        }
+      }
     }
   }
 }
