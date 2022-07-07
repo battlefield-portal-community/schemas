@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/battlefield-portal-community/schemas/main/ranger/embed_message.schema.json",
+  "title": "Embed Messages Config",
+  "description": "Config Schema for defining embed Messages",
+  "type": "object",
+  "properties": {
+    "channels": {
+      "title": "Channels",
+      "description": "List of channels",
+      "type": "array",
+      "format": "tabs",
+      "items": {
+        "headerTemplate": "{{self.name}}",
+        "type": "object",
+        "title": "Channel",
+        "properties": {
+          "saveConfigButton": {
+            "type": "button",
+            "title": "Save Config",
+            "propertyOrder": 1,
+            "options": {
+              "button": {
+                "action": "saveConfig",
+                "validated": true
+              }
+            }
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[0-9]{18}$",
+            "title": "Channel ID",
+            "description": "ID of the channel to post Messages in",
+            "propertyOrder": 2
+          },
+          "name": {
+            "type": "string",
+            "title": "Channel Name",
+            "options": {
+              "hidden": true
+            }
+          },
+          "embeds": {
+            "$ref": "https://raw.githubusercontent.com/battlefield-portal-community/schemas/main/ranger/definitions.schema.json#/definitions/messageEmbeds"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    "goHomePageButton": {
+      "type": "button",
+      "title": "Home",
+      "propertyOrder": 1,
+      "options": {
+        "button": {
+          "action": "goHomePage"
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 1
+}
