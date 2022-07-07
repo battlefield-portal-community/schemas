@@ -1,33 +1,38 @@
 {
-"$schema": "https://json-schema.org/draft/2020-12/schema",
-"$id": "https://raw.githubusercontent.com/battlefield-portal-community/ranger/main/bot/configs/schemas/message.schema.json",
-"title": "Global Settings",
-"description": "Control Which modules are turned on from here",
-"type": "object",
-"properties": {
-  "cogs": {
-    "title": "All cogs",
-    "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/battlefield-portal-community/ranger/main/bot/configs/schemas/message.schema.json",
+  "title": "Global Settings",
+  "description": "Control Which modules are turned on from here",
+  "type": "object",
+  "properties": {
+    "cogs": {
+      "title": "All cogs",
+      "type": "object",
       "patternProperties": {
-        "name": {
-          "type": "string",
-          "options": {
-            "hidden": true
-          }
-        },
-        "enabled": {
-          "type": "boolean",
-          "format": "checkbox",
-          "default": false
-        },
-        "button": {
-          "format": "button",
-          "title": "Settings",
-          "options": {
+        ".*": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "options": {
+                "hidden": true
+              }
+            },
+            "enabled": {
+              "type": "boolean",
+              "format": "checkbox",
+              "default": false
+            },
             "button": {
-              "icon": "icon-arrow-down",
-              "action": "openSettings",
-              "validated": true
+              "format": "button",
+              "title": "Settings",
+              "options": {
+                "button": {
+                  "icon": "icon-arrow-down",
+                  "action": "openSettings",
+                  "validated": true
+                }
+              }
             }
           }
         }
