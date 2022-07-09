@@ -40,8 +40,35 @@
               "hidden": true
             }
           },
-          "embeds": {
-            "$ref": "https://raw.githubusercontent.com/battlefield-portal-community/schemas/main/ranger/definitions.schema.json#/definitions/messageEmbeds"
+          "messages": {
+            "title": "Messages",
+            "type": "array",
+            "format": "tabs-top",
+            "items": {
+              "headerTemplate": "{{self.name}}",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[0-9]{18}$",
+                  "default": "111111111111111111",
+                  "options": {
+                    "hidden": false
+                  }
+                },
+                "name": {
+                  "type": "string",
+                  "description": "Name of the group",
+                  "propertyOrder": 1
+                },
+                "content": {
+                  "type": "string",
+                  "title": "Text Content of the message"
+                },
+                "embeds": {
+                  "$ref": "https://raw.githubusercontent.com/battlefield-portal-community/schemas/main/ranger/definitions.schema.json#/definitions/messageEmbeds"
+                }
+              }
+            }
           }
         },
         "required": [
