@@ -28,7 +28,7 @@
           },
           "id": {
             "type": "string",
-            "pattern": "^[0-9]{18}$",
+            "pattern": "^[0-9]{19}$",
             "title": "Channel ID",
             "description": "ID of the channel to post Messages in",
             "propertyOrder": 2
