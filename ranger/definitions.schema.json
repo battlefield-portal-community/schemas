@@ -12,7 +12,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^[0-9]{19}$",
+          "pattern": "^[0-9]{17,}$",
           "title": "Message ID",
           "description": "ID of the message that is sent [Leave Empty, set by bot]"
         },
@@ -78,7 +78,7 @@
                   },
                   "role_id": {
                     "type": "string",
-                    "pattern": "^[0-9]{18}$",
+                    "pattern": "^[0-9]{17,}$",
                     "title": "Role ID",
                     "description": "ID of Role to be given"
                   },
